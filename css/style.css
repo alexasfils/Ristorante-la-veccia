@@ -1,36 +1,102 @@
+@font-face {
+    font-display: swap;
+    font-family: 'Poppins';
+    font-weight: 300;
+    src: url('../fonts/poppins-v20-latin-300.woff2') format('woff2');
+}
+@font-face {
+    font-display: swap;
+    font-family: 'Poppins';
+    font-weight: 400;
+    src: url('../fonts/poppins-v20-latin-regular.woff2') format('woff2');
+}
+@font-face {
+    font-display: swap;
+    font-family: 'Poppins';
+    font-weight: 600;
+    src: url('../fonts/poppins-v20-latin-600.woff2') format('woff2');
+}
+@font-face {
+    font-display: swap;
+    font-family: 'Poppins';
+    font-weight: 900;
+    src: url('../fonts/poppins-v20-latin-900.woff2') format('woff2');
+}
 :root {
     --color-primary-dark:#31271a;
-    --color-primary-light: #faf3ea;
-    --color-brand-light: #06df7d;
+    --color-primary-light: #faf4ea;
+    --color-secondary-dark: #A28268;
+    --color-brand-normal: #06df7d;
+    --color-brand-light:#cfcfbc;
     --color-brand-dark: #465827;
 }
 /*Global*/
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
 body {
     color: var(--color-primary-dark);
+    background-color: var(--color-primary-light);
+    font-family: 'Popins', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+    margin-top: 0;
+}
+a {
+    display: inline-block;
+}
+.adress{
+    font-style: normal;
 }
 ul {
     list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.visualy-hidden{
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+.section {
+    padding: 48px 0;
+}
+.container {
+    width: 100%;
+    max-width: 1288px;
+    margin: 0 auto;
+    padding: 0 24px;
 }
 /*Button*/
-.button-primary {
-    color: var(--color-primary-light);
-    background-color: var(--color-brand-light);
-    border: 2px solid var(--color-brand-light);
-    border-radius: 8px;
-    cursor: pointer;
+button {
+    
+font-weight: 600;
+color: var(--color-primary-light);
+cursor: pointer;
+border-radius: 8px;
+}
+.button-primary {  
+    padding: 16px 32px;
+    background-color: var(--color-brand-normal);
+    border: 2px solid var(--color-brand-normal);
 }
 .button-primary:hover {
     color: var(--color-brand-dark);
     background-color: transparent;
 }
-
-.button-secondary
-{
-    color: var(--color-primary-light);
-    border-radius: 8px;
+.button-secondary {
+    padding: 8px 16px;
     border: 2px solid rgb(3, 142, 241);
     background-color: rgb(3, 142, 241);
-    cursor: pointer;
 }
 .button-secondary:hover {
     color: var(--color-brand-dark);
@@ -38,30 +104,277 @@ ul {
 }
 /*Link*/
 .link {
-    color: var(--color-primary-light) ;
+    color: var(--color-primary-light);
+    text-decoration: none;
 }
 .link:hover {
-    color: var(--color-brand-light);
+    color: var(--color-brand-normal);
 }
+/*Heder section*/
+.header {
+    background-color: gray;
+}
+.header-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.header-nav {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    gap: 40px;
+}
+.header-menu {
+    display: flex;
+    gap: 64px;
+    flex-grow: 1;
+    justify-content: center;
+}
+
 /*Hero section*/
+.hero-section {
+    padding: 272px 0;
+    background-image: url('../images/hero-section-background.jpg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+}
 .hero-title {
+    margin-bottom: 0;
     color: var(--color-primary-light);
+    text-align:center;
+    font-size: 111px;
+    font-weight: 900;
 }
 .hero-title .accent {
-    color: var(--color-brand-light);
+    color: var(--color-brand-normal);
 }
 /*Title section*/
 .section-title .accent {
     color: var(--color-brand-dark);
 }
-
+.section-title {
+    font-size: 64px;
+    font-weight: 900;
+    line-height: 1.3;
+}
+.section-title.centered {
+text-align: center;
+}
+/*Tradition section*/
+.traditions-section {
+    padding-top: 96px;
+}
+.traditions-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+.traditions-content {
+    min-width: 710px;
+    
+}
+.traditions-title {
+    margin-bottom: 42px;
+}
+.traditions-text .brand {
+    color: var(--color-brand-normal);
+    font-weight: 600;
+}
+.traditions-text .uppercase  {
+   color: var(--color-brand-normal);
+   text-transform: uppercase;
+}
+.traditions-text {
+    max-width: 600px;
+}
+.traditions-text.limited {
+    max-width: 350px;
+}
+.traditions-imagine {
+    border-radius: 400px 400px 0px 0px;
+}
 /*Advantsges section*/
+.advantages-section {
+    padding: 16px 0;
+    background-color:var(--color-brand-normal);
+}
 .advantages-list {
-    color:var(--color-primary-light);
-    background-color:var(--color-brand-light);
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
 }
+
+.advantages-item {
+    font-weight: 300;
+    font-size: 20px;
+     color:var(--color-primary-light);
+}
+/*Cheff section*/
+.chef-title{
+    margin-bottom: 16px;
+    font-weight: 600;
+    font-size: 40px;
+}
+.chefs-title {
+    
+    max-width: 520px;
+    margin:0 auto 80px;
+}
+.chefs-title::before,
+.chefs-title::after {
+    display: block;
+    width: 352px;
+    border: 2px solid var(--color-brand-light);
+    content: '';
+}
+.chefs-list {
+    display: flex;
+    gap:40px 30px;
+    flex-wrap: wrap;
+    
+}
+.chefs-item {
+    flex-basis: calc((100% - 40px) / 2);
+}
+.chef-card {
+    display: flex;
+    gap: 20px;
+}
+.chef-photo {
+    border-radius: 4px 4px 4px 200px;
+    box-shadow: -16px 16px 0 0 var(--color-primary-light), -16px 16px 2px var(--color-secondary-dark);
+}
+.chef-text p {
+    margin-bottom: 24px;
+}
+.chef-text p:last-child {
+    margin-bottom: 0;
+}
+
+/*Menu section*/
+.menus-container {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+.menus-list{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.menus-item {
+flex-basis: calc((100% - 40px) / 3);
+}
+.menu-card {
+    height: 444px;
+    padding: 24px;
+    background-image: linear-gradient(
+    180deg,
+    rgba(49,38,26,0) 55.21%,
+    rgba(49, 38, 26,0.71) 72.92%,
+    var(--color-primary-dark)100%);
+
+}
+.menus-title {
+    margin-bottom: 80px;
+}
+.menu-title{
+        font-weight: 600;
+        font-size: 36px;
+        margin-bottom: 80px;
+    }
+.ingredients-title {
+    font-weight: 400;
+    font-size: 30px;
+}
+div .menu-text {
+    font-weight: 300;
+    font-size: 14px;
+}
+/*carousel-icons*/
+.carousel-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1px solid var(--color-primary-dark);
+    cursor: pointer;
+}
+.carousel-button:hover {
+    background-color: var(--color-primary-dark);
+    fill: var(--color-primary-light);
+}
+/*Contact section*/
+.contact-section {
+    padding-bottom: 96px;
+}
+.contact-container {
+    display: flex;
+    gap: 32px;
+}
+.contact-title {
+    margin-bottom: 16px;
+}
+
+.contact-map {
+    flex-shrink: 0;
+    border: none;
+    border-radius: 16px;
+}
+
+/*FOOTER*/
+.footer-cantainer {
+    display: flex;
+    gap: 20px;
+}
+.footer-nav,
+.footer-address {
+    display: flex;
+    flex-basis: 50%;
+    gap: 20px;
+}
+.footer-logo,
+.footer-menu {
+flex-grow: 1;
+}
+.address-list,
+.address-info {
+    flex-grow: 1;
+}
+.adress-link{
+    color: var(--color-primary-light);
+    font-weight: 300;
+    font-size: 16px;
+    text-decoration: none;
+}
+.adress-link:hover {
+    color: var(--color-brand-normal);
+}
+.adress-icon {
+    fill: var(--color-primary-light);
+}
+.adress-icon:hover {
+    fill: var(--color-brand-normal);
+}
+.footer {
+    padding: 32px 0;
+    background-image: url('../images/footer-background.png');
+    background-color:var(--color-primary-dark);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.adress-copyright {
+    color: var(--color-primary-light);
+    font-size: 14px;
+}
+
 /*images*/
-img {
-    width: 500px;
-    height: 550px;
-}

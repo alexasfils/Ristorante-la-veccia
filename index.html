@@ -9,140 +9,231 @@
 </head>
 
 <body>
-  <header>
-    <nav>
-      <a href="/">
-        <img src="" alt="logo"><!--LOGO-->
-      </a>
-      <ul>
-        <li><a class="link" href="#traditions-section">Le tradizioni</a></li>
-        <li><a class="link" href="#chefs-section">Scheff</a></li>
-        <li><a class="link" href="#menu-section">Menu</a></li>
-        <li><a class="link" href="#contact-section">Contatti</a></li>
-      </ul>
-    </nav>
-    <button class="button-primary" type="button">Prenotare la chiamata</button>
+  <header class="header">
+    <div class="container">
+      <div class="header-container">
+        <nav class="header-nav">
+          <a href="/">
+            <img src="images/logo.svg" alt="logo"><!--LOGO-->
+          </a>
+          <ul class="header-menu">
+            <li><a class="link" href="#traditions-section">Le tradizioni</a></li>
+            <li><a class="link" href="#chefs-section">Scheff</a></li>
+            <li><a class="link" href="#menu-section">Menu</a></li>
+            <li><a class="link" href="#contact-section">Contatti</a></li>
+          </ul>
+        </nav>
+
+        <button class="button-primary" type="button">Prenotare la chiamata</button>
+      </div>
+    </div>
   </header>
   <main>
-    <section>
-      <h1 class="hero-title"><span class="accent">Ristorante </span> la Veccia</h1>
+    <section class="hero-section">
+      <div class="container">
+        <h1 class="hero-title"><span class="accent">Ristorante </span> la Veccia</h1>
+      </div>
     </section>
-    <section id="traditions-section"></section>
-    <ul class="advantages-list">
-      <li>Grande scelta dei menu</li>
-      <li>La tradizione di casa</li>
-      <li>Migliori Cheff</li>
-    </ul>
-    <h2 class="section-title">Le tradizioni Siciliane</h2>
-    <p>
-      <span>Le tradizioni della "Veccia"</span> e' un ristorante <br />
-      che ha custodito tutto il meglio delle tradizioni siciliane. <br />
-      Ricotta Ragusana, pistacchio di Bronde, maiale Siciliano e tutto il meglio della cucina locale!
-    </p>
-    <p>Noi collaboriamo dirittamente con artigian. La nostra specialita è <br />
-      <span>cliente soddisfatto </span>. Il nostro ristorante ha custodito i locali
-      nei design originale "Barocco".
-    </p>
-    <img src="./images/la-tavola.jpg" alt="baker-man">
+    <section class="advantages-section">
+      <div class="container">
+        <h2 class="visualy-hidden">I nostri pregi</h2>
+        <ul class="advantages-list">
+          <li class="advantages-item">Grande scelta dei menu</li>
+          <li class="advantages-item">La tradizione di casa</li>
+          <li class="advantages-item">Migliori Cheff</li>
+        </ul>
+      </div>
     </section>
-    <section id="chefs-section">
-      <h2 class="section-title">I nostri <br /> <span class="accent">migliori Cheff</span></h2>
-      <ul>
-        <li>
-          <article>
-            <img src="./images/loredana.jpg" alt="the schef loredana">
-            <h3>Loredana!</h3>
-            <p>Ciao, sono Loredana.</p>
-            <p>Gia da 10 anni sto preparando<br /> le idee squesite.</p>
-            <p>Vi preparero i piatti piu deliziosi.</p>
-          </article>
-        </li>
-        <li>
-          <article>
-            <img src="./images/marco.jpg" alt="the schef Marco">
-            <h3>Marco!</h3>
-            <p>Ciao, sono Marco.</p>
-            <p>Gia da 10 anni sto preparando<br /> le idee squesite.</p>
-            <p>Vi preparero i piatti piu deliziosi.</p>
-          </article>
-        </li>
-        <li>
-          <article>
-            <img src="./images/giovanni.jpg" alt="the schef Giovanni">
-            <h3>Giovanni</h3>
-            <p>Ciao, sono Giovanni!</p>
-            <p>La mia sperienza di pasticciere e di 18 hanni. LA VECCIA - e il nostro amore, il quale
-              noi
-              condividiamo ogni giorno a voi attrsverso i nostri piatti</p>
-            <p>Vi preparero il dolce di qulsiasi gusto!</p>
-          </article>
-        </li>
-      </ul>
+    <section class="section traditions-section" id="traditions-section">
+      <div class="container">
+        <div class="traditions-container">
+          <div contenteditable="traditions-content">
+            <h2 class="traditions-title section-title">Le tradizioni <br> Siciliane</h2>
+            <p class="traditions-text">
+              Le tradizioni della <span class="brand uppercase">"Veccia"</span> e' un ristorante
+              che ha custodito tutto il meglio delle tradizioni siciliane.
+              Ricotta Ragusana, pistacchio di Bronde, maiale Siciliano e tutto il meglio della cucina locale!
+            </p>
+            <p class="traditions-text limited">Noi collaboriamo dirittamente con artigian. La nostra specialita è
+              <span class="brand">cliente soddisfatto</span>. Il nostro ristorante ha custodito i locali
+              nei design originale "Barocco".
+            </p>
+          </div>
+
+          <img class="traditions-imagine" src="./images/la-tavola.jpg" alt="baker-man">
+        </div>
+      </div>
     </section>
-    <section id="menu-section">
-      <h2 class="section-title">Menu</h2>
-      <ul>
-        <li>
-          <article>
-            <h3>Carbonara</h3>
-            <h4>Ingridienti</h4>
-            <p>Spagetti Palermo, pancetta, basciamella, uovo.</p>
-            <img src="./images/carbonara.jpg" alt="the pasta carbonara">
-            <button class="button-secondary" type="button">Ordina</button>
-          </article>
-        </li>
-        <li>
-          <article>
-            <h3>Lasagna</h3>
-            <p></p>
-            <img src="./images/lasagna.jpg" alt="the pasta lasagna">
-            <button class="button-secondary" type="button">Ordina</button>
-          </article>
-        </li>
-        <li>
-          <article>
-            <h3>Ravioli</h3>
-            <p></p>
-            <img src="./images/ravioli.jpg" alt="the pasta ravioli">
-            <button class="button-secondary" type="button">Ordina</button>
-          </article>
-        </li>
-      </ul>
+    <section class="section" id="chefs-section">
+      <div class="container">
+        <h2 class="chefs-title section-title centered">I nostri <br /> <span class="accent">migliori Cheff</span></h2>
+        <ul class="chefs-list">
+          <li class="chefs-item">
+            <article class="chef-card">
+              <img class="chef-photo" src="./images/loredana.jpg" alt="the schef loredana">
+              <div>
+                <h3 class="chef-title">Loredana</h3>
+                <div class="chef-text">
+                  <p>Ciao, sono Loredana.</p>
+                  <p>Gia da 10 anni sto preparando<br /> le idee squesite.</p>
+                  <p>Vi preparero i piatti piu deliziosi.</p>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="chefs-item">
+            <article class="chef-card">
+              <img class="chef-photo" src="./images/marco.jpg" alt="the schef Marco">
+              <div>
+                <h3 class="chef-title">Marco</h3>
+                <div>
+                  <p>Ciao, sono Marco.</p>
+                  <p>Gia da 12 anni sto preparando<br /> le prelibatezze.</p>
+                  <p>Vi preparero i piatti piu affascinanti.</p>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="chefs-item">
+            <article class="chef-card">
+              <img class="chef-photo" src="./images/giovanni.jpg" alt="the schef Giovanni">
+              <div>
+                <h3 class="chef-title">Giovanni</h3>
+                <div>
+                  <p>Ciao, sono Giovanni!</p>
+                  <p>Sono 18 gli anni di esperienza. LA VECCIA - e il nostro amore, lo
+                    condividiamo ogni giorno con voi.</p>
+                  <p>Vi preparero il dolce piu gustoso!</p>
+                </div>
+
+              </div>
+            </article>
+          </li>
+        </ul>
+      </div>
     </section>
-    <section id="contact-section">
-      <h2 class="section-title">Unisciti a noi</h2>
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m25!1m12!1m3!1d2791.958804164705!2d10.241033222300887!3d45.59137288445538!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m10!3e6!4m3!3m2!1d45.5913689!2d10.243039699999999!4m4!2s45.59135%2C10.243048!3m2!1d45.59135!2d10.243048!5e0!3m2!1sit!2sit!4v1699362651512!5m2!1sit!2sit"
-        width="603" height="595" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
+    <section class="section" id="menu-section">
+      <div class="container">
+        <h2 class=" menus-title section-title centered">Menu</h2>
+        <div class="menus-container">
+          <button class="carousel-button" type="button">
+            <svg width="16" height="16">
+              <use href="images/icons.svg#icon-arrow"></use>
+            </svg>
+          </button>
+          <ul class="menus-list">
+            <li class="menus-item">
+              <article class="menu-card">
+                <h3 class="menu-title">Carbonara</h3>
+                <h4 class="ingredients-title">Ingridienti</h4>
+                <div class="menu-text">
+                  <p>Spagetti Palermo, pancetta, basciamella, uovo.</p>
+                  <p>Ingridienti possono variare a secondo la richiesta.</p>
+                </div>
+                <button class="button-secondary" type="button">Ordina</button>
+              </article>
+            </li>
+            <li class="menus-item">
+              <article class="menu-card">
+                <h3 class="menu-title">Lasagna</h3>
+                <h4 class="ingredients-title">Ingridienti</h4>
+                <div class="menu-text">
+                  <p>Pasata Ragusana, ragu di maiale, pamodoro, basciamella.</p>
+                  <p>Ingridienti possono variare a secondo la richiesta.</p>
+                </div>
+                <button class="button-secondary" type="button">Ordina</button>
+              </article>
+            </li>
+            <li class="menus-item">
+              <article class="menu-card">
+                <h3 class="menu-title">Ravioli</h3>
+                <h4 class="ingredients-title">Ingridienti</h4>
+                <div class="menu-text">
+                  <p>Pasta ragusana, ricotta, spinaci, salsa di pomodoro.</p>
+                  <p>Ingridienti possono variare a secondo la richiesta.</p>
+                </div>
+                <button class="button-secondary" type="button">Ordina</button>
+              </article>
+            </li>
+          </ul>
+          <button class="carousel-button" type="button">
+            <svg width="16" height="16">
+              <use href="images/icons.svg#icon-arrow"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+    <section class="contact-section section" id="contact-section">
+      <div class="container">
+        <div class="contact-container">
+          <div class="contact-form">
+            <h2 class="section-title contact-title">Unisciti a noi</h2>
+            <p>Compila la forma per essere richiamato.</p>
+            <!--Form-->
+          </div>
+          <iframe class="contact-map"
+            src="https://www.google.com/maps/embed?pb=!1m25!1m12!1m3!1d2791.958804164705!2d10.241033222300887!3d45.59137288445538!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m10!3e6!4m3!3m2!1d45.5913689!2d10.243039699999999!4m4!2s45.59135%2C10.243048!3m2!1d45.59135!2d10.243048!5e0!3m2!1sit!2sit!4v1699362651512!5m2!1sit!2sit"
+            width="603" height="595" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+
+      </div>
     </section>
   </main>
-  <footer>
-    <nav>
-      <a href="#">
-        <img src="./images" alt="logo"> <!--LOGO-->
-      </a>
-      <ul>
-        <li><a class="link" href="#" target="_blank">Le tradizioni</a></li>
-        <li><a class="link" href="#" target="_blank">Scheff</a></li>
-        <li><a class="link" href="#" target="_blank">Format</a></li>
-        <li><a class="link" href="#" target="_blank">Contatti</a></li>
-      </ul>
-    </nav>
-    <address>
-      <ul>
-        <li><a href="tel:+3903345242279">+3903345242279</a></li>
-        <li><a href="mailto:tradizione.veccia@gmail.com">tradizione.veccia@gmail.com</a></li>
-        <li><a href="https://maps.app.goo.gl/V93sNDLa9A6Chw3a8" target="_blank">Via Vittorio Veneto, 28, 25073
-            Bovezzo BS</a></li>
-        <li><a href="#"><!--facebook icon--></a></li>
-        <li><a href="#"><!--instagramm icon--></a></li>
-      </ul>
-      <a href="#" target="_blank">Privaci palici</a>
-      <p>&copy; Copiright 2023</p>
-    </address>
-  </footer>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-cantainer">
+        <nav class="footer-nav">
+          <div class="footer-logo">
+            <a href="#">
+              <img src="images/logo.svg" alt="logo"> <!--LOGO-->
+            </a>
+          </div>
+          <ul class="footer-menu">
+            <li><a class="link" href="#">Le tradizioni</a></li>
+            <li><a class="link" href="#">Scheff</a></li>
+            <li><a class="link" href="#">Format</a></li>
+            <li><a class="link" href="#">Contatti</a></li>
+          </ul>
+        </nav>
+        <address class="footer-address">
+          <ul class="address-list">
+            <li><a class="adress-link" href="tel:+3903345242279">+3903345242279</a></li>
+            <li>
+              <a class="adress-link" href="mailto:tradizione.veccia@gmail.com">tradizione.veccia@gmail.com</a>
+            </li>
+            <li>
+              <a class="adress-link" href="https://maps.app.goo.gl/V93sNDLa9A6Chw3a8" target="_blank">Via Vittorio
+                Veneto,
+                28, 25073 Bovezzo
+                BS</a>
+            </li>
+            <li>
+              <a href="#">
+                <svg class="adress-icon" width="32" height="32">
+                  <use href="images/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <svg class="adress-icon" width="32" height="32">
+                  <use href="images/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+          <div class="address-info">
+            <a class="adress-link" href="#" target="_blank">Privacy Policy</a>
+            <p class="adress-copyright">&copy; Copyright 2023.</p>
+          </div>
+        </address>
+      </div>
 
+    </div>
+
+  </footer>
 </body>
 
 </html>
