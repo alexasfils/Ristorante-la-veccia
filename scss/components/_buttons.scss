@@ -1,0 +1,27 @@
+button {
+    font-weight: 600;
+    color: var(--color-primary-light);
+    cursor: pointer;
+    border-radius: 8px;
+}
+.button-primary {
+    padding: 16px 32px;
+    background-color: var(--color-brand-normal);
+    border: 2px solid var(--color-brand-normal);
+    transition: color 0.2s;
+}
+.button-primary:hover {
+    color: var(--color-brand-dark);
+    background-color: transparent;
+
+}
+.button-secondary {
+    padding: 8px 16px;
+    border: 2px solid rgb(3, 142, 241);
+    background-color: rgb(3, 142, 241);
+    transition: background-color 02s;
+}
+.button-secondary:hover {
+    color: var(--color-brand-dark);
+    background-color: transparent;
+}

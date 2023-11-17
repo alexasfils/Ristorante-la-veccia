@@ -5,18 +5,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Restaurant</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="./scss/main.min.css">
 </head>
 
 <body>
   <header class="header">
     <div class="container">
-      <div class="header-container">
-        <nav class="header-nav">
+      <div class="header__container">
+        <nav class="header__nav">
           <a href="/">
             <img src="images/logo.svg" alt="logo"><!--LOGO-->
           </a>
-          <ul class="header-menu">
+          <ul class="header__menu">
             <li><a class="link" href="#traditions-section">Le tradizioni</a></li>
             <li><a class="link" href="#chefs-section">Scheff</a></li>
             <li><a class="link" href="#menu-section">Menu</a></li>
@@ -31,80 +31,84 @@
   <main>
     <section class="hero-section">
       <div class="container">
-        <h1 class="hero-title"><span class="accent">Ristorante </span> la Veccia</h1>
+        <h1 class="hero-section__title"><span class="text-brand">Ristorante </span> la Veccia</h1>
       </div>
     </section>
     <section class="advantages-section">
       <div class="container">
         <h2 class="visualy-hidden">I nostri pregi</h2>
-        <ul class="advantages-list">
-          <li class="advantages-item">Grande scelta dei menu</li>
-          <li class="advantages-item">La tradizione di casa</li>
-          <li class="advantages-item">Migliori Cheff</li>
+        <ul class="advantages-section__list">
+          <li class="advantages-section__item">Grande scelta dei menu</li>
+          <li class="advantages-section__item">La tradizione di casa</li>
+          <li class="advantages-section__item">Migliori Cheff</li>
         </ul>
       </div>
     </section>
     <section class="section traditions-section" id="traditions-section">
       <div class="container">
-        <div class="traditions-container">
-          <div class="traditions-content">
-            <h2 class="traditions-title section-title">Le tradizioni <br> Siciliane</h2>
-            <p class="traditions-text">
-              Le tradizioni della <span class="brand uppercase">"Veccia"</span> e' un ristorante
+        <div class="traditions-section__container">
+          <div class="traditions-section__content">
+            <h2 class="traditions-section__title section-title">Le tradizioni <br> Siciliane</h2>
+            <p>
+              Le tradizioni della <span class="text-brand text-bold text-uppercase">"Veccia"</span> e' un ristorante
               che ha custodito tutto il meglio delle tradizioni siciliane.
               Ricotta Ragusana, pistacchio di Bronde, maiale Siciliano e tutto il meglio della cucina locale!
             </p>
-            <p class="traditions-text limited">Noi collaboriamo dirittamente con artigian. La nostra specialita è
-              <span class="brand">cliente soddisfatto</span>. Il nostro ristorante ha custodito i locali
+            <p class="traditions-section__text traditions-section__text--limited">Noi collaboriamo dirittamente con
+              artigian. La nostra specialita è
+              <span class="text-brand text-bold ">cliente soddisfatto</span>. Il nostro ristorante ha custodito i
+              locali
               nei design originale "Barocco".
             </p>
           </div>
 
-          <img class="traditions-imagine" src="./images/la-tavola.jpg" alt="baker-man">
+          <img class="traditions-section__imagine" src="./images/la-tavola.jpg" alt="baker-man">
         </div>
       </div>
     </section>
-    <section class="section" id="chefs-section">
+    <section class="chefs-section section" id="chefs-section">
       <div class="container">
-        <h2 class="chefs-title section-title centered">I nostri <br /> <span class="accent">migliori Cheff</span></h2>
-        <ul class="chefs-list">
-          <li class="chefs-item">
+        <h2 class="chefs-section__title section__title section__title--centered">I nostri <br /> <span
+            class="text-brand-dark">migliori
+            Cheff</span></h2>
+        <ul class="chefs-section__list">
+          <li class="chefs-section__item">
             <article class="chef-card">
-              <img class="chef-photo" src="./images/loredana.jpg" alt="the schef loredana">
+              <img class="chef-card__photo" src="./images/loredana.jpg" alt="the schef loredana">
               <div>
-                <h3 class="chef-title">Loredana</h3>
-                <div class="chef-text">
-                  <p>Ciao, sono Loredana.</p>
-                  <p>Gia da 10 anni sto preparando<br /> le idee squesite.</p>
-                  <p>Vi preparero i piatti piu deliziosi.</p>
-                </div>
+                <h3 class="chef-card__title">Loredana</h3>
+
+                <p class="chef-card__text">Ciao, sono Loredana.</p>
+                <p class="chef-card__text">Gia da 10 anni sto preparando<br /> le idee squesite.</p>
+                <p class="chef-card__text">Vi preparero i piatti piu deliziosi.</p>
+
               </div>
             </article>
           </li>
-          <li class="chefs-item">
+          <li class="chefs-section__item">
             <article class="chef-card">
-              <img class="chef-photo" src="./images/marco.jpg" alt="the schef Marco">
+              <img class="chef-card__photo" src="./images/marco.jpg" alt="the schef Marco">
               <div>
-                <h3 class="chef-title">Marco</h3>
-                <div>
-                  <p>Ciao, sono Marco.</p>
-                  <p>Gia da 12 anni sto preparando<br /> le prelibatezze.</p>
-                  <p>Vi preparero i piatti piu affascinanti.</p>
-                </div>
+                <h3 class="chef-card__title">Marco</h3>
+
+                <p class="chef-card__text">Ciao, sono Marco.</p>
+                <p class="chef-card__text">Gia da 12 anni sto preparando<br /> le prelibatezze.</p>
+                <p class="chef-card__text">Vi preparero i piatti piu affascinanti.</p>
+
               </div>
             </article>
           </li>
-          <li class="chefs-item">
+          <li class="chefs-section__item">
             <article class="chef-card">
-              <img class="chef-photo" src="./images/giovanni.jpg" alt="the schef Giovanni">
+              <img class="chef-card__photo" src="./images/giovanni.jpg" alt="the schef Giovanni">
               <div>
-                <h3 class="chef-title">Giovanni</h3>
-                <div>
-                  <p>Ciao, sono Giovanni!</p>
-                  <p>Sono 18 gli anni di esperienza. LA VECCIA - e il nostro amore, lo
-                    condividiamo ogni giorno con voi.</p>
-                  <p>Vi preparero il dolce piu gustoso!</p>
-                </div>
+                <h3 class="chef-card__title">Giovanni</h3>
+
+                <p class="chef-card__text">Ciao, sono Giovanni!</p>
+                <p class="chef-card__text">Sono 18 gli anni di esperienza. LA VECCIA - e il nostro amore, lo
+                  condividiamo ogni giorno con voi.</p>
+                <p class="chef-card__text">Vi preparero il dolce piu gustoso!</p>
+
 
               </div>
             </article>
@@ -112,43 +116,46 @@
         </ul>
       </div>
     </section>
-    <section class="section" id="menu-section">
+    <section class="menus-section section" id="menu-section">
       <div class="container">
-        <h2 class=" menus-title section-title centered">Menu</h2>
-        <div class="menus-container">
+        <h2 class=" menus-section__title section__title section__title--centered">Menu</h2>
+        <div class="menus-section__container">
           <button class="carousel-button" type="button">
             <svg width="16" height="16">
               <use href="images/icons.svg#icon-arrow"></use>
             </svg>
           </button>
-          <ul class="menus-list">
-            <li class="menus-item">
+          <ul class="menus-section__list">
+            <li class="menus-section__item">
               <article class="menu-card">
-                <h3 class="menu-title">Carbonara</h3>
-                <h4 class="ingredients-title">Ingridienti</h4>
-                <div class="menu-text">
+                <img class="menu-card__image" src="./images/carbonara.jpg" alt="pasta carbonara">
+                <h3 class="menu-card__title">Carbonara</h3>
+                <h4 class="menu-card__title">Ingridienti</h4>
+                <div class="menu-card__text">
                   <p>Spagetti Palermo, pancetta, basciamella, uovo.</p>
                   <p>Ingridienti possono variare a secondo la richiesta.</p>
                 </div>
                 <button class="button-secondary" type="button">Ordina</button>
               </article>
             </li>
-            <li class="menus-item">
+            <li class="menus-section__item">
               <article class="menu-card">
-                <h3 class="menu-title">Lasagna</h3>
-                <h4 class="ingredients-title">Ingridienti</h4>
-                <div class="menu-text">
+                <img class="menu-card__image" src="./images/lasagna.jpg" alt="pasta lasagna">
+                <h3 class="menu-card__title">Lasagna</h3>
+                <h4 class="menu-card__title">Ingridienti</h4>
+                <div class="menu-card__text">
                   <p>Pasata Ragusana, ragu di maiale, pamodoro, basciamella.</p>
                   <p>Ingridienti possono variare a secondo la richiesta.</p>
                 </div>
                 <button class="button-secondary" type="button">Ordina</button>
               </article>
             </li>
-            <li class="menus-item">
+            <li class="menus-section__item">
               <article class="menu-card">
-                <h3 class="menu-title">Ravioli</h3>
-                <h4 class="ingredients-title">Ingridienti</h4>
-                <div class="menu-text">
+                <img class="menu-card__image" src="./images/ravioli.jpg" alt="pasta ravioli">
+                <h3 class="menu-card__title">Ravioli</h3>
+                <h4 class="menu-card__title">Ingridienti</h4>
+                <div class="menu-card__text">
                   <p>Pasta ragusana, ricotta, spinaci, salsa di pomodoro.</p>
                   <p>Ingridienti possono variare a secondo la richiesta.</p>
                 </div>
@@ -166,31 +173,32 @@
     </section>
     <section class="contact-section section" id="contact-section">
       <div class="container">
-        <div class="contact-container">
-          <div class="contact-form">
-            <h2 class="section-title contact-title">Unisciti a noi</h2>
+        <div class="contact-section__container">
+          <div class="contact-section__form">
+            <h2 class="contact-section__title section__title">Unisciti a noi</h2>
             <p>Compila la forma per essere richiamato.</p>
             <form name="contact-form" autocomplete="off">
-              <div class="form-field">
-                <input class="form-input" type="text" id="user-name" name="user-name" placeholder="nome">
-                <label class="form-lable visualy-hidden" for="user-name">Nome</label>
+              <div class="contact-section__form-field input">
+                <input class="input__control" type="text" id="user-name" name="user-name" placeholder="nome" required>
+                <label class="input__lable visualy-hidden" for="user-name">Nome</label>
               </div>
 
-              <div class="form-field">
-                <input class="form-input" type="tel" id="user-tel" class="user-tel" placeholder="telefono">
-                <label class="form-lable visualy-hidden" for="user-tel">Telefono</label>
+              <div class="contact-section__form-field input">
+                <input class="input__control" type="tel" id="user-tel" class="user-tel" placeholder="telefono" required>
+                <label class="input__lable visualy-hidden" for="user-tel">Telefono</label>
               </div>
-              <div class="form-field">
-                <input class="form-input" type="email" id="user-email" class="user-email" placeholder="email">
-                <label class="form-lable visualy-hidden" for="user-email">Email</label>
+              <div class="contact-section__form-field input">
+                <input class="input__control" type="email" id="user-email" class="user-email" placeholder="email"
+                  required>
+                <label class="input__lable visualy-hidden" for="user-email">Email</label>
               </div>
 
-              <button type="submit" class="form-button button-primary">Prenotare la chiamata</button>
-              <p class="form-terms">Premendo il tasto acetto la <a class="form-terms-link" href="#">Privacy Policy</a>
+              <button class="contact-section__button button-primary" type="submit">Prenotare la chiamata</button>
+              <p class="form-terms">Premendo il tasto acetto la <a class="form-terms__link" href="#">Privacy Policy</a>
               </p>
             </form>
           </div>
-          <iframe class="contact-map"
+          <iframe class="contact-section__map"
             src="https://www.google.com/maps/embed?pb=!1m25!1m12!1m3!1d2791.958804164705!2d10.241033222300887!3d45.59137288445538!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m10!3e6!4m3!3m2!1d45.5913689!2d10.243039699999999!4m4!2s45.59135%2C10.243048!3m2!1d45.59135!2d10.243048!5e0!3m2!1sit!2sit!4v1699362651512!5m2!1sit!2sit"
             width="603" height="595" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
           </iframe>
@@ -211,7 +219,7 @@
           <ul class="footer-menu">
             <li><a class="link" href="#">Le tradizioni</a></li>
             <li><a class="link" href="#">Scheff</a></li>
-            <li><a class="link" href="#">Format</a></li>
+            <li><a class="link" href="#">Menu</a></li>
             <li><a class="link" href="#">Contatti</a></li>
           </ul>
         </nav>
@@ -252,27 +260,33 @@
     </div>
 
   </footer>
-  <div class="backdrop is-hidden">
+  <div class="backdrop ">
     <div class="modal">
-      <button class="button-primary modal-btn-close" type="button">Close</button>
+      <button class="button-primary modal__btn-close modal-btn-close" type="button">Close</button>
       <h2>Prenotare la chiamata</h2>
       <p>Lascia la tua richiesta e nostri specialisti ti contatteranno.</p>
-      <form name="modal-form" autocomplete="off" novalidate>
-        <div class="form-field">
-          <input class="form-input" type="text" id="user-name" name="user-name" placeholder="nome">
-          <label class="form-lable visualy-hidden" for="user-name">Nome</label>
+      <form name="modal-form" autocomplete="off">
+        <div class="modal__form-field input">
+          <input class="input__control" type="text" id="user-name" name="user-name" placeholder="nome" minlength="2"
+            maxlength="20" required>
+          <label class="input__label visualy-hidden" for="user-name">Nome</label>
         </div>
 
-        <div class="form-field">
-          <input class="form-input" type="tel" id="user-tel" class="user-tel" placeholder="telefono">
-          <label class="form-lable visualy-hidden" for="user-tel">Telefono</label>
+        <div class="modal__form-field input">
+          <input class="input__control" type="tel" id="user-tel" class="user-tel" placeholder="telefono"
+            pattern="^\+(0-9){12}" required>
+          <label class="input__lable visualy-hidden" for="user-tel">Telefono</label>
         </div>
-        <div class="form-field">
-          <input class="form-input" type="email" id="user-email" class="user-email" placeholder="email">
-          <label class="form-lable visualy-hidden" for="user-email">Email</label>
+        <div class="modal__form-field input">
+          <input class="input__control" type="email" id="user-email" class="user-email" placeholder="email" required>
+          <label class="input__lable visualy-hidden" for="user-email">Email</label>
         </div>
+        <!--  <div class="checkbox">
+          <input class="checkbox-input visualy-hidden" type="checkbox" id="terms-conditions" name="terms-conditions">
+          <label class="checkbox-label" for="terms-conditions">Io sicuro acetto la Privacy Policy</label>
+        </div> -->
 
-        <button type="submit" class="form-button button-primary">Prenotare la chiamata</button>
+        <button class="modal__button button-primary" type="submit">Prenotare la chiamata</button>
         <p class="form-terms">Premendo il tasto acetto la <a class="form-terms-link" href="#">Privacy Policy</a></p>
       </form>
     </div>

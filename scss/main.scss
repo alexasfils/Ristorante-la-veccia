@@ -1,0 +1,53 @@
+@import './utils/fonts';
+@import './utils/variables';
+@import './base';
+@import './utils/utils';
+@import './utils/texts.scss';
+
+@import './components/buttons';
+@import './components/links';
+@import './components/carousel-button';
+@import './components/chef-card';
+@import './components/menu-card';
+@import './layouts/form-terms';
+
+@import './components/inputs';
+@import'./layouts/header';
+@import './layouts/hero-section' ;
+@import './layouts/section';
+@import './layouts/container';
+@import './layouts/tradition-section';
+@import './layouts/advantages-section';
+@import './layouts/cheffs-section';
+@import './layouts/menus-section';
+@import './layouts/contact-section';
+@import './layouts/footer';
+@import './layouts/modal';
+
+
+/*Title section*/
+
+
+/*.checkbox {
+    position: relative;
+}
+.checkbox-input {
+appearance: none;
+}
+.checkbox-input:checked + .checkbox-label::before {
+    background-color: green;
+}
+.checkbox-label {
+    padding-left: 24px;
+}
+.checkbox-label::before {
+position: absolute;
+top: 0;
+left: 0;
+width: 16px;
+height: 16px;
+margin-top: 5px;
+border: 1px solid var(--color-primary-dark);
+border-radius: 2px;
+content: '';
+}*/
