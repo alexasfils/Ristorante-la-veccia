@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Restaurant</title>
   <link rel="stylesheet" href="./scss/main.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -14,7 +15,7 @@
       <div class="header__container">
         <nav class="header__nav">
           <a href="/">
-            <img src="images/logo.svg" alt="logo"><!--LOGO-->
+            <img src="images/logo.svg" alt="logo">
           </a>
           <ul class="header__menu">
             <li><a class="link" href="#traditions-section">Le tradizioni</a></li>
@@ -24,7 +25,18 @@
           </ul>
         </nav>
 
-        <button class="button-primary modal-btn-open" type="button">Prenotare la chiamata</button>
+        <button class="header__button button-primary modal-btn-open" type="button">Prenotare la chiamata</button>
+        <button class="header__burger menu-btn-open" type="button">
+          <svg width="24" height="24">
+            <use href="images/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
+
+        <div class="mobile-menu">
+          <button class="mobile-menu__btn-close menu-btn-close" type="button">Close</button>
+        </div>
+
+
       </div>
     </div>
   </header>
@@ -32,6 +44,7 @@
     <section class="hero-section">
       <div class="container">
         <h1 class="hero-section__title"><span class="text-brand">Ristorante </span> la Veccia</h1>
+        <button class="hero-section__button button-primary modal-btn-open" type="button">Prenotare la chiamata</button>
       </div>
     </section>
     <section class="advantages-section">
@@ -48,7 +61,7 @@
       <div class="container">
         <div class="traditions-section__container">
           <div class="traditions-section__content">
-            <h2 class="traditions-section__title section-title">Le tradizioni <br> Siciliane</h2>
+            <h2 class="traditions-section__title section__title">Le tradizioni <br> Siciliane</h2>
             <p>
               Le tradizioni della <span class="text-brand text-bold text-uppercase">"Veccia"</span> e' un ristorante
               che ha custodito tutto il meglio delle tradizioni siciliane.
@@ -105,7 +118,7 @@
                 <h3 class="chef-card__title">Giovanni</h3>
 
                 <p class="chef-card__text">Ciao, sono Giovanni!</p>
-                <p class="chef-card__text">Sono 18 gli anni di esperienza. LA VECCIA - e il nostro amore, lo
+                <p class="chef-card__text">Sono 18 gli anni di esperienza. <br>LA VECCIA - e il nostro amore, <br> lo
                   condividiamo ogni giorno con voi.</p>
                 <p class="chef-card__text">Vi preparero il dolce piu gustoso!</p>
 
@@ -119,51 +132,102 @@
     <section class="menus-section section" id="menu-section">
       <div class="container">
         <h2 class=" menus-section__title section__title section__title--centered">Menu</h2>
-        <div class="menus-section__container">
-          <button class="carousel-button" type="button">
+        <div class="menus-section__slider">
+          <button class="menus-section__button carousel-button prev" type="button">
             <svg width="16" height="16">
               <use href="images/icons.svg#icon-arrow"></use>
             </svg>
           </button>
-          <ul class="menus-section__list">
-            <li class="menus-section__item">
-              <article class="menu-card">
-                <img class="menu-card__image" src="./images/carbonara.jpg" alt="pasta carbonara">
-                <h3 class="menu-card__title">Carbonara</h3>
-                <h4 class="menu-card__title">Ingridienti</h4>
-                <div class="menu-card__text">
-                  <p>Spagetti Palermo, pancetta, basciamella, uovo.</p>
-                  <p>Ingridienti possono variare a secondo la richiesta.</p>
-                </div>
-                <button class="button-secondary" type="button">Ordina</button>
-              </article>
-            </li>
-            <li class="menus-section__item">
-              <article class="menu-card">
-                <img class="menu-card__image" src="./images/lasagna.jpg" alt="pasta lasagna">
-                <h3 class="menu-card__title">Lasagna</h3>
-                <h4 class="menu-card__title">Ingridienti</h4>
-                <div class="menu-card__text">
-                  <p>Pasata Ragusana, ragu di maiale, pamodoro, basciamella.</p>
-                  <p>Ingridienti possono variare a secondo la richiesta.</p>
-                </div>
-                <button class="button-secondary" type="button">Ordina</button>
-              </article>
-            </li>
-            <li class="menus-section__item">
-              <article class="menu-card">
-                <img class="menu-card__image" src="./images/ravioli.jpg" alt="pasta ravioli">
-                <h3 class="menu-card__title">Ravioli</h3>
-                <h4 class="menu-card__title">Ingridienti</h4>
-                <div class="menu-card__text">
-                  <p>Pasta ragusana, ricotta, spinaci, salsa di pomodoro.</p>
-                  <p>Ingridienti possono variare a secondo la richiesta.</p>
-                </div>
-                <button class="button-secondary" type="button">Ordina</button>
-              </article>
-            </li>
-          </ul>
-          <button class="carousel-button next " type="button">
+          <div class="menus-section__container swiper-container">
+            <ul class="menus-section__list swiper-wrapper">
+              <li class="swiper-slide">
+                <article class="menu-card">
+                  <img class="menu-card__image" src="./images/carbonara.jpg" alt="pasta carbonara">
+                  <h3 class="menu-card__title">Carbonara</h3>
+                  <h4 class="menu-card__igridients-title">Ingridienti</h4>
+                  <div class="menu-card__text">
+                    <p>Spagetti Palermo, pancetta, basciamella, uovo.</p>
+                    <p>Ingridienti possono variare a secondo la richiesta.</p>
+                  </div>
+                  <button class="button-secondary" type="button">Ordina</button>
+
+                </article>
+              </li>
+              <li class="swiper-slide">
+                <article class="menu-card">
+                  <img class="menu-card__image" src="./images/lasagna.jpg" alt="pasta lasagna">
+                  <h3 class="menu-card__title">Lasagna</h3>
+                  <h4 class="menu-card__igridients-title">Ingridienti</h4>
+                  <div class="menu-card__text">
+                    <p>Pasata Ragusana, ragu di maiale, pamodoro, basciamella.</p>
+                    <p>Ingridienti possono variare a secondo la richiesta.</p>
+                  </div>
+                  <button class="button-secondary" type="button">Ordina</button>
+
+                </article>
+              </li>
+              <li class="swiper-slide">
+                <article class="menu-card">
+                  <img class="menu-card__image" src="./images/ravioli.jpg" alt="pasta ravioli">
+                  <h3 class="menu-card__title">Ravioli</h3>
+                  <h4 class="menu-card__igridients-title">Ingridienti</h4>
+                  <div class="menu-card__text">
+                    <p>Pasta ragusana, ricotta, spinaci, salsa di pomodoro.</p>
+                    <p>Ingridienti possono variare a secondo la richiesta.</p>
+                  </div>
+                  <button class="button-secondary" type="button">Ordina</button>
+
+                </article>
+              </li>
+              <li class="swiper-slide">
+                <article class="menu-card">
+                  <img class="menu-card__image" src="./images/carbonara.jpg" alt="pasta carbonara">
+                  <h3 class="menu-card__title">Carbonara</h3>
+                  <h4 class="menu-card__igridients-title">Ingridienti</h4>
+                  <div class="menu-card__text">
+                    <p>Spagetti Palermo, pancetta, basciamella, uovo.</p>
+                    <p>Ingridienti possono variare a secondo la richiesta.</p>
+                  </div>
+                  <button class="button-secondary" type="button">Ordina</button>
+
+                </article>
+              </li>
+              <li class="swiper-slide">
+                <article class="menu-card">
+                  <img class="menu-card__image" src="./images/lasagna.jpg" alt="pasta lasagna">
+                  <h3 class="menu-card__title">Lasagna</h3>
+                  <h4 class="menu-card__igridients-title">Ingridienti</h4>
+                  <div class="menu-card__text">
+                    <p>Pasata Ragusana, ragu di maiale, pamodoro, basciamella.</p>
+                    <p>Ingridienti possono variare a secondo la richiesta.</p>
+                  </div>
+                  <button class="button-secondary" type="button">Ordina</button>
+
+                </article>
+              </li>
+              <li class="swiper-slide">
+                <article class="menu-card">
+                  <img class="menu-card__image" src="./images/ravioli.jpg" alt="pasta ravioli">
+                  <h3 class="menu-card__title">Ravioli</h3>
+                  <h4 class="menu-card__igridients-title">Ingridienti</h4>
+                  <div class="menu-card__text">
+                    <p>Pasta ragusana, ricotta, spinaci, salsa di pomodoro.</p>
+                    <p>Ingridienti possono variare a secondo la richiesta.</p>
+                  </div>
+                  <button class="button-secondary" type="button">Ordina</button>
+
+                </article>
+              </li>
+            </ul>
+            <div class="pagination">
+              <span class="pagination__button"></span>
+              <span class="pagination__button"></span>
+              <span class="pagination__button"></span>
+              <span class="pagination__button"></span>
+            </div>
+          </div>
+
+          <button class="menus-section__button carousel-button next" type="button">
             <svg width="16" height="16">
               <use href="images/icons.svg#icon-arrow"></use>
             </svg>
@@ -200,7 +264,7 @@
           </div>
           <iframe class="contact-section__map"
             src="https://www.google.com/maps/embed?pb=!1m25!1m12!1m3!1d2791.958804164705!2d10.241033222300887!3d45.59137288445538!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m10!3e6!4m3!3m2!1d45.5913689!2d10.243039699999999!4m4!2s45.59135%2C10.243048!3m2!1d45.59135!2d10.243048!5e0!3m2!1sit!2sit!4v1699362651512!5m2!1sit!2sit"
-            width="603" height="595" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
           </iframe>
         </div>
 
@@ -209,50 +273,52 @@
   </main>
   <footer class="footer">
     <div class="container">
-      <div class="footer-cantainer">
-        <nav class="footer-nav">
-          <div class="footer-logo">
+      <div class="footer__container">
+        <nav class="footer__nav">
+          <div class="footer__logo">
             <a href="#">
               <img src="images/logo.svg" alt="logo">
             </a>
           </div>
-          <ul class="footer-menu">
+          <ul class="footer__menu">
             <li><a class="link" href="#">Le tradizioni</a></li>
             <li><a class="link" href="#">Scheff</a></li>
             <li><a class="link" href="#">Menu</a></li>
             <li><a class="link" href="#">Contatti</a></li>
           </ul>
         </nav>
-        <address class="footer-address">
-          <ul class="address-list">
-            <li><a class="adress-link" href="tel:+3903345242279">+3903345242279</a></li>
-            <li>
-              <a class="adress-link" href="mailto:tradizione.veccia@gmail.com">tradizione.veccia@gmail.com</a>
-            </li>
-            <li>
-              <a class="adress-link" href="https://maps.app.goo.gl/V93sNDLa9A6Chw3a8" target="_blank">Via Vittorio
-                Veneto,
-                28, 25073 Bovezzo
-                BS</a>
-            </li>
-            <li>
+        <address class="footer__address">
+          <div class="footer__address-contacts">
+            <ul class="footer__address-list">
+              <li><a class="footer__adress-link" href="tel:+3903345242279">+3903345242279</a></li>
+              <li>
+                <a class="footer__adress-link" href="mailto:tradizione.veccia@gmail.com">tradizione.veccia@gmail.com</a>
+              </li>
+              <li>
+                <a class="footer__adress-link" href="https://maps.app.goo.gl/V93sNDLa9A6Chw3a8" target="_blank">Via
+                  Vittorio
+                  Veneto,
+                  28, 25073 Bovezzo
+                  BS</a>
+              </li>
+            </ul>
+            <div>
               <a href="#">
-                <svg class="adress-icon" width="32" height="32">
+                <svg class="footer__adress-icon" width="32" height="32">
                   <use href="images/icons.svg#icon-facebook"></use>
                 </svg>
               </a>
-            </li>
-            <li>
               <a href="#">
-                <svg class="adress-icon" width="32" height="32">
+                <svg class="footer__adress-icon" width="32" height="32">
                   <use href="images/icons.svg#icon-instagram"></use>
                 </svg>
               </a>
-            </li>
-          </ul>
-          <div class="address-info">
-            <a class="adress-link" href="#" target="_blank">Privacy Policy</a>
-            <p class="adress-copyright">&copy; Copyright 2023.</p>
+
+            </div>
+          </div>
+          <div class="footer__address-info">
+            <a class="footer__adress-link" href="#" target="_blank">Privacy Policy</a>
+            <p class="footer__adress-copyright">&copy; Copyright 2023.</p>
           </div>
         </address>
       </div>
@@ -260,7 +326,7 @@
     </div>
 
   </footer>
-  <div class="backdrop ">
+  <div class="backdrop is-hidden">
     <div class="modal">
       <button class="button-primary modal__btn-close modal-btn-close" type="button">Close</button>
       <h2>Prenotare la chiamata</h2>
@@ -291,7 +357,10 @@
       </form>
     </div>
   </div>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="./js/menus-slider.js"></script>
   <script src="js/modal.js"></script>
+  <script src="js/mobile-menu.js"></script>
 </body>
 
 </html>
